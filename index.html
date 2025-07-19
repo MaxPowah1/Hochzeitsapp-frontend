@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HochzeitsApp – Individuelle Hochzeits-Guide-App</title>
+  <meta name="description" content="HochzeitsApp: Eure individuelle Hochzeits-Guide-App. Bündelt alle wichtigen Infos eures großen Tages: Countdown, Zeitplan, Maps-Integration u.v.m.">
+  <meta name="robots" content="index, follow">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Canonical stays absolute -->
+  <link rel="canonical" href="https://hochzeitsapp.com">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="hochzeits_app">
+  <link rel="apple-touch-icon" href="Icon2_512x512.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Icon2_512x512.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/webEditor.css">
+
+  <!-- PayPal SDK -->
+  <script
+          src="https://www.paypal.com/sdk/js?client-id=AQ_jnE1s3Y5tBmhMkKwc_OLjQkn3KKrQYp1Rom2mmrV6nRSNrMhtMq-b6wgPGW93n3dCInSnTmZfK-R5&buyer-country=DE&currency=EUR&components=buttons&enable-funding=card&disable-funding=venmo,paylater"
+          crossorigin="anonymous">
+  </script>
+  <script src="js/checkout-paypal.js"></script>
+</head>
+<body spellcheck="false">
+
+<!-- Splash screen -->
+<div id="splash">
+  <div class="dots-spinner"><div></div><div></div><div></div></div>
+</div>
+
+<!-- Flutter bootstrap -->
+<script src="flutter_bootstrap.js" async></script>
+
+<!-- When Flutter first frame is ready… -->
+<script>
+  window.addEventListener('flutter-first-frame', () => {
+    const s = document.getElementById('splash');
+    if (s) s.remove();
+    document.body.style.background = 'transparent';
+  });
+
+  function removeSplashFromWeb() {
+    const splashElem = document.getElementById("splash");
+    if (splashElem) {
+      splashElem.remove();
+    }
+    document.body.style.background = "transparent";
+  }
+</script>
+</body>
+</html>
